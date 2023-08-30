@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Bud Dashboard</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" type="text/css">
+    <link href="/vendor/boxicons/css/boxicons.css" rel="stylesheet" type="text/css">
+    <link href="/vendor/remixicon/remixicon.css" rel="stylesheet" type="text/css">
+
+    <!-- Template Main CSS File -->
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+
+        <div class="d-flex align-items-center justify-content-between">
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+            <a href="/Bud-dashboard" class="logo d-flex align-items-center mx-3">
+                <span>The Buddy Company</span>
+            </a>
+        </div>
+        <!-- End Logo -->
+
+        <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+
+
+                <li class="nav-item dropdown pe-3">
+
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                        <span class="d-none d-md-block dropdown-toggle ps-2">
+                            <%=BudName%>
+                        </span>
+                    </a>
+                    <!-- End Profile Iamge Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li class="dropdown-header">
+                            <h6>
+                                <%=BudName%>
+                            </h6>
+
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="/Bud-profile">
+                                <i class="bi bi-person"></i>
+                                <span>My Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="/Bud-logout">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Log-Out</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <!-- End Profile Dropdown Items -->
+                </li>
+                <!-- End Profile Nav -->
+
+            </ul>
+        </nav>
+        <!-- End Icons Navigation -->
+
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+
+        <ul class="sidebar-nav" id="sidebar-nav">
+
+            <!-- Dashboard Nav -->
+            <li class="nav-item">
+                <a class="nav-link active" href="/Bud-dashboard">
+                    <i class="bi bi-grid"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <!-- End Dashboard Nav -->
+            
+            <!-- Events Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/Bud-view-all-events">
+                    <i class="bi bi-layout-text-window-reverse"></i>
+                    <span>Events</span>
+                </a>
+            </li>
+            <!-- End Events Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/Bud-logout">
+                    <i class="bi bi-box-arrow-left"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+            <!-- End Logout Page Nav -->
+        </ul>
+
+    </aside>
+    <!-- End Sidebar-->
+
+    <!-- ======= Main ======= -->
+    <main id="main" class="main">
+        <div class="pagetitle">
+            <%- messages('message', locals) %>
+                <h1>Bud Profile</h1>
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/Bud-dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="/Bud-profile">Profile</a></li>
+                    </ol>
+                </nav>
+        </div>
+        <!-- End Page Title -->
+
+        <section class="section profile">
+            <div class="row">
+                <div class="col-xl-4">
+
+                    <div class="card">
+                        <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+
+                            <!-- <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle"> -->
+                            <i class="bi bi-person-circle" style="font-size: xx-large;"></i>
+
+                            <h2>
+                                <%= BudName %>
+                            </h2>
+                            <h3>Bud</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-xl-8">
+
+                    <div class="card">
+                        <div class="card-body pt-3">
+                            <!-- Bordered Tabs -->
+                            <ul class="nav nav-tabs nav-tabs-bordered">
+                                <li class="nav-item">
+                                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Overview</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">
+                                        Edit Profile
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">
+                                        Change Password
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="tab-content pt-2">
+
+                                <div class="tab-pane fade show active profile-overview" id="profile-overview">
+                                    <h5 class="card-title">Profile Details</h5>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label ">Username</div>
+                                        <div class="col-lg-9 col-md-8">
+                                            <%= BudName %>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">User ID</div>
+                                        <div class="col-lg-9 col-md-8">
+                                            <%= BudID %>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Account</div>
+                                        <div class="col-lg-9 col-md-8">Bud</div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Stream</div>
+                                        <div class="col-lg-9 col-md-8">
+                                            <%= BudStream %>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Year</div>
+                                        <div class="col-lg-9 col-md-8">
+                                            <%= BudYear %>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Specialization</div>
+                                        <div class="col-lg-9 col-md-8">
+                                            <%= subject1 %>,
+                                                <%= subject2 %>
+                                                    <%= subject3 %>
+                                                        <%= subject4 %>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Address</div>
+                                        <div class="col-lg-9 col-md-8">
+                                            <%= BudAddress1 %>,
+                                                <%= BudAddress2 %>,
+                                                    <%= BudPin %> -
+                                                        <%= BudCity %>,
+                                                            <%= BudState %>,
+                                                                <%= BudCountry %>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Phone</div>
+                                        <div class="col-lg-9 col-md-8">
+                                            <%= BudContactNumber %>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Email</div>
+                                        <div class="col-lg-9 col-md-8">
+                                            <%= BudEmail %>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
+
+                                    <!-- Profile Edit Form -->
+                                    <form action="/Bud-profile-edit" method="post">
+
+
+                                        <div class="row mb-3">
+                                            <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Username</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="BudName" type="text" class="form-control" id="fullName" value="<%= BudName %> ">
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="BudID" class="col-md-4 col-lg-3 col-form-label">User
+                                                ID</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="BudID" type="text" class="form-control" id="BudID" value="<%= BudID %> " disabled>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="BudStream" class="col-md-4 col-lg-3 col-form-label">Stream</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="BudStream" type="text" class="form-control" id="BudStream" value="<%= BudStream %> " disabled>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="BudYear" class="col-md-4 col-lg-3 col-form-label">Year</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="BudYear" type="text" class="form-control" id="BudYear" value="<%= BudYear %> " disabled>
+                                            </div>
+                                        </div>
+
+                                        <!--User Subject-->
+                                        <div class="row mb-3">
+                                            <label for="BudSpecialization" class="form-label">Specialization</label></br>
+                                            <label for="subject1" class="col-md-4 col-lg-3 col-form-label mb-2">Subject
+                                                1</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input type="text" name="BudSpecialization.subject1" placeholder="Enter Subject 1" class="form-control" id="subject1" value="<%= subject1 %> " disabled>
+                                            </div>
+                                            <label for="subject2" class="col-md-4 col-lg-3 col-form-label mb-2">Subject
+                                                2</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input type="text" name="BudSpecialization.subject2" placeholder="Enter Subject 2" class="form-control" id="subject2" value="<%= subject2 %> " disabled>
+                                            </div>
+                                            <label for="subject3" class="col-md-4 col-lg-3 col-form-label mb-2">Subject
+                                                3</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input type="text" name="BudSpecialization.subject3" placeholder="Enter Subject 3" class="form-control" id="subject3" value="<%= subject3 %> " disabled>
+                                            </div>
+                                            <label for="subject4" class="col-md-4 col-lg-3 col-form-label mb-2">Subject
+                                                4</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input type="text" name="BudSpecialization.subject4" placeholder="Enter Subject 4" class="form-control" id="subject4" value="<%= subject4 %> " disabled>
+                                            </div>
+                                            <div class="invalid-feedback">Please enter valid Specialization Subjects!
+                                            </div>
+                                        </div>
+
+                                        <!--User Address-->
+                                        <div class="row mb-3">
+                                            <label for="BudAddress" class="form-label">Bud Address</label><br>
+                                            <label for="BudAddress1" class="col-md-4 col-lg-3 col-form-label">Address Line1</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input type="text" class="form-control" id="BudAddress1" name="BudAddress.BudAddress1" value="<%= BudAddress1 %>">
+                                            </div>
+                                            <label for="BudAddress2" class="col-md-4 col-lg-3 col-form-label">Address Line2</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input type="text" class="form-control" id="BudAddress2" name="BudAddress.BudAddress2" value="<%= BudAddress2 %>">
+                                            </div>
+                                            <div class="row pt-3">
+                                                <label for="BudCity" class="col-6 form-label">City</label>
+                                                <label for="BudState" class="col-6 form-label lab-padd">State</label>
+                                                <input type="text" class="col-5 inp-padd form-control" id="BudCity" name="BudAddress.BudCity" value="<%= BudCity %>">
+                                                <input type="text" class="col-5 inp-padd form-control" id="BudState" name="BudAddress.BudState" value="<%= BudState %>">
+                                                <label for="BudPin" class="col-6 pt-3 form-label">Pin Code</label>
+                                                <label for="BudCountry" class="col-6 pt-3 form-label lab-padd">Country</label>
+                                                <input type="text" class="col-3 inp-padd form-control" id="BudPin" name="BudAddress.BudPin" value="<%= BudPin %>">
+                                                <input type="text" class="col-7 inp-padd form-control" id="BudCountry" name="BudAddress.BudCountry" value="<%= BudCountry %>">
+                                            </div>
+                                            <div class="invalid-feedback">Please, enter a proper Bud address!</div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="BudContactNumber" type="text" class="form-control" id="Phone" value="<%= BudContactNumber %>">
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="BudEmail" type="email" class="form-control" id="Email" value="<%= BudEmail %>">
+                                            </div>
+                                        </div>
+
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                                        </div>
+                                    </form>
+                                    <!-- End Profile Edit Form -->
+
+                                </div>
+
+                                <div class="tab-pane fade pt-3" id="profile-change-password">
+                                    <!-- Change Password Form -->
+                                    <form method="post" action="/Bud-profile-password-change">
+
+                                        <div class="row mb-3">
+                                            <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Enter
+                                                New
+                                                Password</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="BudPassword" type="password" class="form-control" id="renewPassword">
+                                            </div>
+                                        </div>
+
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-primary">Change Password</button>
+                                        </div>
+                                    </form>
+                                    <!-- End Change Password Form -->
+                                </div>
+                            </div>
+                            <!-- End Bordered Tabs -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- Main -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="/js/main.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Delete A Bud</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" type="text/css">
+    <link href="/vendor/boxicons/css/boxicons.css" rel="stylesheet" type="text/css">
+    <link href="/vendor/remixicon/remixicon.css" rel="stylesheet" type="text/css">
+
+    <!-- Template Main CSS File -->
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+
+        <div class="d-flex align-items-center justify-content-between">
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+            <a href="/admin-dashboard" class="logo d-flex align-items-center mx-3">
+                <span>The Buddy Company</span>
+            </a>
+        </div>
+        <!-- End Logo -->
+
+        <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+
+
+                <li class="nav-item dropdown pe-3">
+
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                        <!-- <img src="" alt="" class="rounded-circle"> -->
+                        <!-- <i class="bi bi-person-circle"></i> -->
+                        <span class="d-none d-md-block dropdown-toggle ps-2"><%=adminUsername%></span>
+                    </a>
+                    <!-- End Profile Iamge Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li class="dropdown-header">
+                            <h6>
+                                <%=adminUsername%>
+                            </h6>
+                            <span>Web Developer</span>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="/admin-profile">
+                                <i class="bi bi-person"></i>
+                                <span>My Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="/admin-logout">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Log-Out</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <!-- End Profile Dropdown Items -->
+                </li>
+                <!-- End Profile Nav -->
+
+            </ul>
+        </nav>
+        <!-- End Icons Navigation -->
+
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+
+        <ul class="sidebar-nav" id="sidebar-nav">
+
+            <!-- Dashboard Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/admin-dashboard">
+                    <i class="bi bi-grid"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <!-- End Dashboard Nav -->
+
+            <!-- Users Nav -->
+            <li class="nav-item">
+                <a class="nav-link" data-bs-target="#users-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-person"></i><span>Users</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="users-nav" class="sidebar-nav nav-content collapse show" data-bs-parent="#sidebar-nav">
+                    <!-- View User -->
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#">
+                            <i class="bi bi-square"></i><span>View User</span>
+                        </a>
+                    </li>
+                    
+                    <!-- Add Users -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-target="#add-nav" data-bs-toggle="collapse" href="#">
+                            <i class="bi bi-square"></i><span>Add Users</span>
+                        </a>
+                        <ul id="add-nav" class="nav-content collapse" data-bs-parent="#users-nav">
+                            <li>
+                                <a href="/Buddy-register">
+                                    <i class="bi bi-circle"></i><span>Buddy</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Bud-register">
+                                    <i class="bi bi-circle"></i><span>Buds</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Delete Users -->
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-target="#delete-nav" data-bs-toggle="collapse" href="#">
+                            <i class="bi bi-square"></i><span>Delete Users</span>
+                        </a>
+                        <ul id="delete-nav" class="nav-content collapse show" data-bs-parent="#users-nav">
+                            <li>
+                                <a href="/Buddy-unregister">
+                                    <i class="bi bi-circle"></i><span>Buddy</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="active" href="/Bud-unregister">
+                                    <i class="bi bi-circle"></i><span>Buds</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- End Users Nav -->
+
+            <!-- Events Nav -->
+            <li class="nav-item">
+                <a class="nav-link" data-bs-target="#events-nav" data-bs-toggle="collapse" href="#">
+                    <i class='bx bx-notepad'></i><span>Events</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="events-nav" class="sidebar-nav nav-content collapse show" data-bs-parent="#sidebar-nav">
+                    <li class="nav-item">
+                        <a href="/admin-add-new-event">
+                            <i class="bi bi-square"></i><span>Add</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin-view-all-events">
+                            <i class="bi bi-square"></i><span>View</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <!-- End Events Nav -->
+     
+      <!-- End Contact Page Nav -->
+
+      <li class="nav-item ">
+        <a class="nav-link collapsed " href="/admin-login ">
+          <i class="bi bi-box-arrow-left "></i>
+          <span>Logout</span>
+        </a>
+      </li><!-- End Logout Page Nav -->
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+   <!-- ======= Main ======= -->
+   <main id="main" class="main">
+
+    <div class="pagetitle">
+        <%- messages('message', locals) %>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/admin-dashboard">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="/Buddy-unregister">Unregister Buddy</a></li>
+            </ol>
+        </nav>
+    </div>
+    <!-- End Page Title -->
+    <div class="container my-5">
+        <section class="section register d-flex flex-column align-items-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-md-10 d-flex flex-column align-items-center justify-content-center">
+
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="pt-4 pb-2">
+                                    <h5 class="card-title text-center pb-0 fs-4">Delete Buddy User</h5>
+                                </div>
+
+                                <form class="row g-3 mb-3 needs-validation" action="/Buddy-unregister" method="post" novalidate>
+                                    <!--User ID-->
+                                    <div class="col-12">
+                                        <label for="userID" class="form-label">Buddy ID</label>
+                                        <input type="text" name="BuddyID" placeholder="Enter Buddy ID" class="form-control" id="userID" required>
+                                        <div class="invalid-feedback">Please enter a valid Buddy ID!</div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100" type="submit">Delete Account</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</main>
+<!-- Main -->
+
+  <a href="# " class="back-to-top d-flex align-items-center justify-content-center "><i class="bi bi-arrow-up-short "></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+  
+  <!-- Template Main JS File -->
+  <script src="/js/main.js "></script>
+
+
+</body>
+
+</html>

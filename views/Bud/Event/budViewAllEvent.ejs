@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>View Events</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" type="text/css">
+    <link href="/vendor/boxicons/css/boxicons.css" rel="stylesheet" type="text/css">
+    <link href="/vendor/remixicon/remixicon.css" rel="stylesheet" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+
+    <!-- Template Main CSS File -->
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+
+        <div class="d-flex align-items-center justify-content-between">
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+            <a href="/Bud-dashboard" class="logo d-flex align-items-center mx-3">
+                <span>The Buddy Company</span>
+            </a>
+        </div>
+        <!-- End Logo -->
+
+        <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+
+
+                <li class="nav-item dropdown pe-3">
+
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                        <!-- <img src="" alt="Profile Picture" class="rounded-circle"> -->
+                        <span class="d-none d-md-block dropdown-toggle ps-2"><%=BudName%></span>
+                    </a>
+                    <!-- End Profile Iamge Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li class="dropdown-header">
+                            <h6>
+                                <%=BudName%>
+                            </h6>
+
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="/Bud-profile">
+                                <i class="bi bi-person"></i>
+                                <span>My Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="/Bud-logout">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Log-Out</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <!-- End Profile Dropdown Items -->
+                </li>
+                <!-- End Profile Nav -->
+
+            </ul>
+        </nav>
+        <!-- End Icons Navigation -->
+
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+
+        <ul class="sidebar-nav" id="sidebar-nav">
+
+            <!-- Dashboard Nav -->
+            <li class="nav-item">
+                <a class="nav-link active" href="/Bud-dashboard">
+                    <i class="bi bi-grid"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <!-- End Dashboard Nav -->
+
+            <!-- Events Nav -->
+            <li class="nav-item">
+                <a class="nav-link active" href="/Bud-view-all-events">
+                    <i class="bi bi-layout-text-window-reverse"></i>
+                    <span>Events</span>
+                </a>
+            </li>
+            <!-- End Events Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/Bud-logout">
+                    <i class="bi bi-box-arrow-left"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+            <!-- End Logout Page Nav -->
+        </ul>
+
+    </aside>
+    <!-- End Sidebar-->
+
+    <!-- ======= Main ======= -->
+    <main id="main" class="main">
+        <div class="pagetitle">
+            <%- messages('message', locals) %>
+                <h1>Bud Dashboard</h1>
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/Bud-dashboard">Dashboard</a></li>
+                    </ol>
+                </nav>
+        </div>
+        <!-- End Page Title -->
+    </main>
+    <!-- Main -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="/js/main.js"></script>
+
+
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</html>
+
+<script>
+    const parentDiv = document.querySelector(".main");
+    window.addEventListener("load", async() => {
+        try {
+            let result = await axios({
+                method: "GET",
+                url: "/Bud-getEvents",
+            });
+            let files = result.data.files;
+            if (!result.data.files.length == 0) {
+                files.forEach((file) => {
+                    markup = `
+    <div class="event__entity">
+        <i class="file__icon fa fa-file-text" aria-hidden="true"></i>
+        <span class="event__date">${file.name}</span>
+        <a href="${file.name}" class="event__link" target="_blank"><i class="fa fa-eye tests__icon" aria-hidden="true"></i></a>
+      </div>
+    `;
+                    parentDiv.insertAdjacentHTML("beforeend", markup);
+                });
+            } else {
+                markup = `
+    <div class="if-not-found-body">
+        <i class="bx bx-notepad"></i>
+        <h3>No event found!</h3>
+    </div>`;
+                parentDiv.insertAdjacentHTML("beforeend", markup);
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    });
+</script>
