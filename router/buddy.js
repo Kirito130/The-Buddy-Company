@@ -27,6 +27,33 @@ router.post("/Buddy-login", async (req, res) => {
 });
 // Buddy Login Ends \\
 
+// Buddy Homepage \\
+router.get("/home-buddy", BuddyAuth, async(req, res) => {
+  try {
+      const files = await Event.find({});
+      res.render("Buddy/buddyHomePage",{
+        BuddyName: req.user.BuddyName, files
+      });
+  } catch (error) {
+      req.flash("error", error.toString());
+      res.redirect("/");
+  }
+});
+
+// Buddy About Us \\
+router.get("/Buddy-about-us", BuddyAuth, async(req, res) => {
+  try {
+      const files = await Event.find({});
+      res.render("Buddy/buddyAboutUS",{
+        BuddyName: req.user.BuddyName, files
+      });
+  } catch (error) {
+      req.flash("error", error.toString());
+      res.redirect("/");
+  }
+});
+
+
 // Buddy Logout \\
 router.get("/Buddy-logout", BuddyAuth, async (req, res) => {
   try {

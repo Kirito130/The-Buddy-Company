@@ -223,28 +223,6 @@
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-lg-3 col-md-4 label">Specialization</div>
-                                        <div class="col-lg-9 col-md-8">
-                                            <%= subject1 %>,
-                                                <%= subject2 %>
-                                                    <%= subject3 %>
-                                                        <%= subject4 %>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-lg-3 col-md-4 label">Address</div>
-                                        <div class="col-lg-9 col-md-8">
-                                            <%= BudAddress1 %>,
-                                                <%= BudAddress2 %>,
-                                                    <%= BudPin %> -
-                                                        <%= BudCity %>,
-                                                            <%= BudState %>,
-                                                                <%= BudCountry %>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
                                         <div class="col-lg-3 col-md-4 label">Phone</div>
                                         <div class="col-lg-9 col-md-8">
                                             <%= BudContactNumber %>
@@ -292,57 +270,6 @@
                                             <div class="col-md-8 col-lg-9">
                                                 <input name="BudYear" type="text" class="form-control" id="BudYear" value="<%= BudYear %> " disabled>
                                             </div>
-                                        </div>
-
-                                        <!--User Subject-->
-                                        <div class="row mb-3">
-                                            <label for="BudSpecialization" class="form-label">Specialization</label></br>
-                                            <label for="subject1" class="col-md-4 col-lg-3 col-form-label mb-2">Subject
-                                                1</label>
-                                            <div class="col-md-8 col-lg-9">
-                                                <input type="text" name="BudSpecialization.subject1" placeholder="Enter Subject 1" class="form-control" id="subject1" value="<%= subject1 %> " disabled>
-                                            </div>
-                                            <label for="subject2" class="col-md-4 col-lg-3 col-form-label mb-2">Subject
-                                                2</label>
-                                            <div class="col-md-8 col-lg-9">
-                                                <input type="text" name="BudSpecialization.subject2" placeholder="Enter Subject 2" class="form-control" id="subject2" value="<%= subject2 %> " disabled>
-                                            </div>
-                                            <label for="subject3" class="col-md-4 col-lg-3 col-form-label mb-2">Subject
-                                                3</label>
-                                            <div class="col-md-8 col-lg-9">
-                                                <input type="text" name="BudSpecialization.subject3" placeholder="Enter Subject 3" class="form-control" id="subject3" value="<%= subject3 %> " disabled>
-                                            </div>
-                                            <label for="subject4" class="col-md-4 col-lg-3 col-form-label mb-2">Subject
-                                                4</label>
-                                            <div class="col-md-8 col-lg-9">
-                                                <input type="text" name="BudSpecialization.subject4" placeholder="Enter Subject 4" class="form-control" id="subject4" value="<%= subject4 %> " disabled>
-                                            </div>
-                                            <div class="invalid-feedback">Please enter valid Specialization Subjects!
-                                            </div>
-                                        </div>
-
-                                        <!--User Address-->
-                                        <div class="row mb-3">
-                                            <label for="BudAddress" class="form-label">Bud Address</label><br>
-                                            <label for="BudAddress1" class="col-md-4 col-lg-3 col-form-label">Address Line1</label>
-                                            <div class="col-md-8 col-lg-9">
-                                                <input type="text" class="form-control" id="BudAddress1" name="BudAddress.BudAddress1" value="<%= BudAddress1 %>">
-                                            </div>
-                                            <label for="BudAddress2" class="col-md-4 col-lg-3 col-form-label">Address Line2</label>
-                                            <div class="col-md-8 col-lg-9">
-                                                <input type="text" class="form-control" id="BudAddress2" name="BudAddress.BudAddress2" value="<%= BudAddress2 %>">
-                                            </div>
-                                            <div class="row pt-3">
-                                                <label for="BudCity" class="col-6 form-label">City</label>
-                                                <label for="BudState" class="col-6 form-label lab-padd">State</label>
-                                                <input type="text" class="col-5 inp-padd form-control" id="BudCity" name="BudAddress.BudCity" value="<%= BudCity %>">
-                                                <input type="text" class="col-5 inp-padd form-control" id="BudState" name="BudAddress.BudState" value="<%= BudState %>">
-                                                <label for="BudPin" class="col-6 pt-3 form-label">Pin Code</label>
-                                                <label for="BudCountry" class="col-6 pt-3 form-label lab-padd">Country</label>
-                                                <input type="text" class="col-3 inp-padd form-control" id="BudPin" name="BudAddress.BudPin" value="<%= BudPin %>">
-                                                <input type="text" class="col-7 inp-padd form-control" id="BudCountry" name="BudAddress.BudCountry" value="<%= BudCountry %>">
-                                            </div>
-                                            <div class="invalid-feedback">Please, enter a proper Bud address!</div>
                                         </div>
 
                                         <div class="row mb-3">

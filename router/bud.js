@@ -19,7 +19,7 @@ router.post("/Bud-login", async (req, res) => {
     const token = await bud.generateAuthToken();
     res.cookie("Bud_token", token);
     req.flash("success", "Logged in successfully");
-    res.redirect("/home");
+    res.redirect("/home-bud");
   } catch (e) {
     req.flash("error", e.toString());
     res.redirect("/Bud-login");
@@ -27,11 +27,34 @@ router.post("/Bud-login", async (req, res) => {
 });
 // Bud Login Ends \\
 
-  // Bud Dashboard \\
-  router.get("/Bud-dashboard", BudAuth, async (req, res) => {
-    res.render("Bud/budDashboard", {BudName: req.user.BudName});
-  });
-  // Bud Dashboard Ends \\
+
+// Bud Homepage \\
+router.get("/home-bud", BudAuth, async(req, res) => {
+  try {
+      const files = await Event.find({});
+      res.render("Bud/budHomePage",{
+        BudName: req.user.BudName, files
+      });
+  } catch (error) {
+      req.flash("error", error.toString());
+      res.redirect("/");
+  }
+});
+
+
+// Bud Get About Us Page \\
+router.get("/Bud-about-us", BudAuth, async(req, res) => {
+  try {
+      const files = await Event.find({});
+      res.render("Bud/budAboutUS",{
+        BudName: req.user.BudName, files
+      });
+  } catch (error) {
+      req.flash("error", error.toString());
+      res.redirect("/");
+  }
+});
+
 
 // Bud Profile \\
 router.get("/Bud-profile", BudAuth, async (req, res) => {
