@@ -116,12 +116,6 @@
                     <i class="bi bi-person"></i><span>Users</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="users-nav" class="sidebar-nav nav-content collapse " data-bs-parent="#sidebar-nav">
-                    <!-- View User -->
-                    <li class="nav-item">
-                        <a class="nav-link collapsed" href="#">
-                            <i class="bi bi-square"></i><span>View User</span>
-                        </a>
-                    </li>
                     
                     <!-- Add Users -->
                     <li class="nav-item">
@@ -227,13 +221,13 @@
                             </div>
                             
                             <div class="card-footer row mx-auto">
-                                <form class="col-lg-6 g-3 mb-3 needs-validation" action="/view-event" method="post" novalidate>
+                                <form class="col-lg-6 g-3 mb-3 needs-validation" action="#" method="post" novalidate>
                                     <input type="text" name="eventID" placeholder="Enter Buddy ID" class="form-control d-none" id="eventID" value="<%= myFile.eventID %>" required>
                                     <button class="btn btn-primary w-100" type="submit">View Event</button>
                                 </form>
                                 <form class="col-lg-6 g-3 mb-3 needs-validation" action="/admin-delete-events" method="post" novalidate>
                                         <input type="text" name="eventID" placeholder="Enter Buddy ID" class="form-control d-none" id="eventID" value="<%= myFile.eventID %>" required>
-                                        <button class="btn btn-primary w-100" type="submit">Delete Event</button>
+                                        <button class="btn btn-primary" style="width: 120px;" type="submit">Delete Event</button>
                                 </form>
                             </div>
                         </div>

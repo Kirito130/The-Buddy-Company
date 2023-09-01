@@ -25,13 +25,12 @@
     <!-- Template Main CSS File -->
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     <link href="/home/home.css" rel="stylesheet" type="text/css">
-
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg" style="gap: 0 57%;">
-            <a class="navbar-brand" id="bl-col" href="/home-bud">
+    <header style="margin: 0;">
+        <nav class="navbar fixed-top navbar-expand-lg" style="gap: 0 38%; background-color: #232323; z-index: 100; padding-left: 1em;">
+            <a class="navbar-brand" id="bl-col" href="/home-buddy">
                 <img src="/images/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
                 The Buddy Company
             </a>
@@ -43,13 +42,16 @@
             <div class="collapse navbar-collapse my-2 my-lg-0" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" id="bl-col" href="/home-bud">Home</a>
+                    <a class="nav-link" id="bl-col" href="/home-buddy">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="bl-col" href="/Bud-view-all-events">Events</a>
+                    <a class="nav-link" id="bl-col" href="/Buddy-about-us">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="bl-col" href="/Bud-about-us">About Us</a>
+                    <a class="nav-link" id="bl-col" href="#"><%=BuddyName%></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="bl-col" href="/Bud-logout">Log-Out</a>
                 </li>
               </ul>
             </div>
@@ -59,65 +61,132 @@
     
     <section class="home-hero parallax--bg">
         <div class="cont">
-            <h1 class="title parallax--box">Welcome to The Buddy Company <span>we make socializing FUN!</span></h1>
-            <a href="/Bud-about-us" class="button button-accent">About Us</a>
+            <h1 class="title parallax--box">The Buddy Company <span>ABOUT US</span></h1>
         </div>
     </section>
     
-    <div id="nav-container" style="background-color: #232323; z-index: 100;">
-        <nav class="navbar navbar-expand-lg navbar-light" id="nav-main">
-            <a class="navbar-brand" id="bl-col" href="#">
-                <img src="/images/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
-                The Buddy Company
-            </a>
+    <section class="section abt-section" style="margin: 8% 0;">
+        <h1 style="font-size: 10vh; color: #fff; margin-bottom: 5%;">ABOUT THE COLLEGE</h1>
+        <div class="row">
+            <div class="col-lg-10" style="margin: auto;">
+                <div class="card bg-dark mb-5">
+                    <div class="card-body" style="padding: 4em">
+                        <h5 id="abt-title" class="card-title">KC (Kishinchand Chellaram) College</h5>
+                        <p id="team-about" class="card-text text-start">Welcome to KC College, a distinguished institution committed to fostering academic excellence and personal growth. With a legacy spanning for decades, we have consistently provided a nurturing environment that empowers students to thrive in both their educational pursuits and their journey towards becoming well-rounded individuals. Our dedicated faculty, state-of-the-art facilities, and vibrant community come together to create a dynamic learning experience that prepares students for success in a rapidly evolving world. Join us at KC College and all embark on a transformative educational adventure that will shape your future.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
+    </section>
+
         
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto" id="nav-links">
-                    <li class="nav-item active">
-                        <a class="nav-link" id="bl-col" href="/home-bud">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="bl-col" href="/Bud-view-all-events">Events</a>
-                    </li>
-                    <li class="nav-item" style="width: 85px;">
-                        <a class="nav-link" id="bl-col" href="/Bud-about-us">About Us</a>
-                    </li>
-                </ul>
+    <section class="section abt-section" style="margin: 8% 0;">
+        <h1 style="font-size: 10vh; color: #fff; margin-bottom: 5%;">ABOUT US</h1>
+        <div class="row">
+            <div class="col-lg-10" style="margin: auto;">
+                <div class="card bg-dark mb-5">
+                    <div class="card-body" style="padding: 4em">
+                        <h5 id="abt-title" class="card-title">The Buddy Company</h5>
+                        <p id="team-about" class="card-text text-start">Welcome to The Buddy Company, a vibrant and supportive student club dedicated to making your first year of university an unforgettable experience. At The Buddy Company, we understand that transitioning to college life can be both exciting and challenging. That's why we've created a close-knit community that pairs first-year students with seasoned second-year mentors, providing invaluable guidance and companionship every step of the way.</p>
+                        <p id="team-about" class="card-text text-start">But The Buddy Company is more than just academic support – it's a place to forge lasting friendships and create unforgettable memories. We organize a wide range of exciting social events, workshops, and outings that foster connections between first-year students and mentors. From study groups to movie nights, campus tours to game tournaments, you'll find plenty of opportunities to bond with your fellow students and make the most out of your university experience.</p>
+                        <p id="team-about" class="card-text text-start">Join us at The Buddy Company and embark on a journey of growth, camaraderie, and self-discovery. Together, we'll navigate the challenges and triumphs of your first year, ensuring that you not only succeed academically but also create cherished memories that will last a lifetime.</p>
+                    </div>
+                </div>
             </div>
-        </nav>
-    </div>
-    
-    <div class="cont" style="margin-top: 10%;">
-        <section class="home-about">
-    
-            <div class="home-about-textbox parallax--box">
-                <h1>Who we are</h1>
-                <p><strong>The Buddy Company</strong>, a vibrant and supportive student club dedicated to making your first year of university an unforgettable experience. At The Buddy Company, we understand that transitioning to college life can be both exciting and challenging. Thus, we are here to help them solve this dilemma</p>
-                <br><a href="/Bud-about-us" class="button button-accent">More About Us</a>
+        </div>
+    </section>
+
+    <section class="section abt-section" style="margin: 8% 0;">
+        <h1 style="font-size: 10vh; color: #fff; margin-bottom: 5%;">THE TEAM</h1>
+        <div class="row">
+            <div class="col-lg-10" style="margin: auto;">
+                <div class="card bg-dark mb-5">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="about/team/Mohammed.jpg" id="team-img" class="img-fluid rounded-start" alt="Husain's Photo">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 id="team-name" class="card-title">Mohammed</h5>
+                                <p id="team-about" class="card-text text-start">He is a distinguished individual marked by unwavering dedication and exemplary leadership, Mohammed has consistently demonstrated remarkable management skills that have left an indelible mark on those fortunate enough to work alongside them. With a proven track record of successfully guiding teams toward achieving their goals, Mohammed possesses a natural ability to inspire, motivate, and cultivate high-performing individuals. Their adeptness in strategic planning, effective decision-making, and adept conflict resolution underscores their prowess as a leader who can navigate the most complex of challenges. With a dynamic blend of visionary thinking and a hands-on approach to management, Mohammed has consistently achieved outstanding results, setting a formidable standard for leadership excellence.</p>
+                                <div class="team-socials">
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="3em" id="team-socials" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="3em" id="team-socials" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="3em" id="team-socials" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-    
-        </section>
-    </div>
-    
-    
-    <section class="event">
-        <h1>Some of our work</h1>
-        <% files.forEach(function(myFile) { %>
-            <!-- portfolio item 01 -->
-            <figure class="event-item">
-                <img id="event-img" src="data:myFile/<%=myFile.eventBgPhoto.contentType%>;base64,
-                    <%=myFile.eventBgPhoto.data.toString('base64')%>" alt="Event Photo">
-                <figcaption class="event-desc">
-                    <h3 class="mt-3"><%= myFile.eventName %></h3>
-                    <p><%= myFile.eventAbout %></p>
-                    <a href="" class="button button-accent button-small">Event details</a>
-                </figcaption>
-            </figure>
-        <% }) %>               
+        </div>
+        <div class="row">
+            <div class="col-lg-10" style="margin: auto;">
+                <div class="card bg-dark mb-5">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="about/team/Husain.jpg" id="team-img" class="img-fluid rounded-start" alt="Husain's Photo">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 id="team-name" class="card-title">Husain</h5>
+                                <p id="team-about" class="card-text text-start">An integral part of the club, he is a sheer hardworking and confident person. He is a core planner who excecutes each plan with precision. His leadership and co-ordinative skills truly benefits the club. Also being a fun-loving person, he loves chilling out with the clubmates. Their leadership style is marked by inclusivity, creativity, and a knack for bringing out the best in others. Whether it's organizing team-building activities, injecting humor into meetings, or simply radiating a contagious sense of joy, Husain consistently demonstrates that leadership can be both effective and enjoyable, leaving a lasting impression on those fortunate enough to collaborate with them. With an innate talent for fostering a positive work environment, they have the remarkable ability to turn even the most challenging tasks into enjoyable and productive experiences.</p>
+                                <div class="team-socials">
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="3em" id="team-socials" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="3em" id="team-socials" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="3em" id="team-socials" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10" style="margin: auto;">
+                <div class="card bg-dark mb-5">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="about/team/Siddique.jpg" id="team-img" class="img-fluid rounded-start" alt="Husain's Photo">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 id="team-name" class="card-title">Siddique</h5>
+                                <p id="team-about" class="card-text text-start">A precious member of our club. A hardworking and intelligent guy. He has good management skills and leadership qualities. He is able to provide us with regular timeline updates about the progress made by the club and its members. Their relentless work ethic has been a driving force behind their many accomplishments, consistently setting them apart as a person of exceptional diligence. Whether facing challenging projects or tight deadlines, Siddique has consistently shown a remarkable capacity to go above and beyond expectations, leaving no stone unturned in their pursuit of excellence. Their persistence, combined with an unmatched attention to detail, has not only delivered impressive results but has also inspired those around them to strive for greater heights.</p>
+                                <div class="team-socials">
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="3em" id="team-socials" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="3em" id="team-socials" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="3em" id="team-socials" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10" style="margin: auto;">
+                <div class="card bg-dark mb-5">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="about/team/Tahir.jpg" id="team-img" class="img-fluid rounded-start" alt="Husain's Photo">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 id="team-name" class="card-title">Tahir</h5>
+                                <p id="team-about" class="card-text text-start">A passionate web developer and co-founder of The Buddy Company. His excellent marketing and design skills have brought quality content and enhanced user experience to the website. heir visionary thinking and strategic approach to problem-solving have consistently yielded innovative solutions and elevated team performance. Tahir has a proven track record of making astute decisions even in high-pressure situations, showcasing their keen analytical mind and capacity for forward-thinking. Their ability to inspire and guide teams with a blend of wisdom and foresight has set them apart as a standout leader who not only achieves outstanding results but also empowers those around them to reach their full potential.</p>
+                                <div class="team-socials">
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="3em" id="team-socials" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="3em" id="team-socials" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="3em" id="team-socials" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -125,27 +194,26 @@
             <div class="col-lg-1">
                 <img src="/images/favicon.ico" height="120" width="120" class="d-inline-block align-top" alt="">
             </div>
-            <div class="col-lg-7 col-md-10">
-                <p>Our mission is to ensure that every newcomer feels welcomed, empowered, and ready to conquer their academic journey. Our enthusiastic team of second-year buddies comes from diverse backgrounds and academic disciplines, ensuring that you'll find a mentor who understands your unique needs and aspirations.</p>
+            <div class="col-lg-6 col-md-10">
+                <p>Our mission is to ensure that every newcomer feels welcomed, empowered, and ready to conquer their academic journey. Our enthusiastic team of second-year buddies comes from diverse backgrounds and academic disciplines, ensuring that you'll find a <br> mentor who understands your unique needs and aspirations.</p>
             </div>
     
-            <div class="col-lg-2 col-md-5", style="text-align: center;">
+            <div class="col-lg-1 col-md-5"></div>
+            <div class="col-lg-2 col-md-5">
                 <ul class="unstyled-list">
-                    <li><strong>Shoreditch</strong></li>
-                    <li>Shoreditch</li>
-                    <li>Woke retro </li>
-                    <li>Readymade </li>
-                    <li>Scenester </li>
+                    <li><strong>Pages</strong></li>
+                    <li><a href="/home-bud">Home</a></li>
+                    <li><a href="/Bud-view-all-events">Events</a></li>
+                    <li><a href="/Bud-about-us">About Us</a></li>
                 </ul>
             </div>
     
-            <div class="col-lg-2 col-md-5", style="text-align: center;">
+            <div class="col-lg-2 col-md-5">
                 <ul class="unstyled-list">
-                    <li><strong>Shoreditch</strong></li>
-                    <li>Shoreditch</li>
-                    <li>Woke retro </li>
-                    <li>Readymade </li>
-                    <li>Scenester </li>
+                    <li><strong>Events</strong></li>
+                    <% files.forEach(function(myFile) { %>
+                        <li><a href=""><%= myFile.eventName %></a></li>
+                    <% }) %>               
                 </ul>
             </div>
         </div>
@@ -163,6 +231,7 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
     ></script>
+    <script src="https://kit.fontawesome.com/e87a281607.js" crossorigin="anonymous"></script>
     <script src="/homePage/js/jquery.min.js"></script>
     <script src="/homePage/js/popper.js"></script>
     <script src="/homePage/js/bootstrap.min.js"></script>

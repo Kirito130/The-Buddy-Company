@@ -57,41 +57,41 @@ router.get("/Bud-about-us", BudAuth, async(req, res) => {
 
 
 // Bud Profile \\
-router.get("/Bud-profile", BudAuth, async (req, res) => {
-  res.render("Bud/budProfile", {
-    BudName: req.user.BudName,
-    BudID: req.user.BudID,
-    BudYear: req.user.BudYear,
-    BudStream: req.user.BudStream,
-    BudContactNumber: req.user.BudContactNumber,
-    BudEmail: req.user.BudEmail,
-  });
-});
+// router.get("/Bud-profile", BudAuth, async (req, res) => {
+//   res.render("Bud/budProfile", {
+//     BudName: req.user.BudName,
+//     BudID: req.user.BudID,
+//     BudYear: req.user.BudYear,
+//     BudStream: req.user.BudStream,
+//     BudContactNumber: req.user.BudContactNumber,
+//     BudEmail: req.user.BudEmail,
+//   });
+// });
 
-router.post("/Bud-profile-edit", BudAuth,async (req, res) => {
-  try{
-    const Bud = await Bud.findOneAndUpdate({_id:req.user._id},req.body)
-    // console.log(req.body)
-    await Bud.save();
-    req.flash("success", "Updated Successfully");
-    res.redirect("/Bud-profile");
-  }catch(e){
-    req.flash("error", e.toString());
-    res.redirect("/Bud-profile");
-  }
-});
+// router.post("/Bud-profile-edit", BudAuth,async (req, res) => {
+//   try{
+//     const Bud = await Bud.findOneAndUpdate({_id:req.user._id},req.body)
+//     // console.log(req.body)
+//     await Bud.save();
+//     req.flash("success", "Updated Successfully");
+//     res.redirect("/Bud-profile");
+//   }catch(e){
+//     req.flash("error", e.toString());
+//     res.redirect("/Bud-profile");
+//   }
+// });
 
-router.post("/Bud-profile-password-change",BudAuth,async(req,res)=>{
-  try{
-    req.user.BudPassword = req.body.BudPassword
-    await req.user.save();
-    req.flash("success", "Updated Successfully");
-    res.redirect("/Bud-profile");
-  }catch(e){
-    req.flash("error", e.toString());
-    res.redirect("/Bud-profile");
-  }
-});
+// router.post("/Bud-profile-password-change",BudAuth,async(req,res)=>{
+//   try{
+//     req.user.BudPassword = req.body.BudPassword
+//     await req.user.save();
+//     req.flash("success", "Updated Successfully");
+//     res.redirect("/Bud-profile");
+//   }catch(e){
+//     req.flash("error", e.toString());
+//     res.redirect("/Bud-profile");
+//   }
+// });
 // Bud Profile Ends \\
 
 // Bud Logout \\

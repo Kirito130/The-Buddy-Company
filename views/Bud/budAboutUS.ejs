@@ -29,7 +29,7 @@
 
 <body>
     <header style="margin: 0;">
-        <nav class="navbar fixed-top navbar-expand-lg" style="gap: 0 55%; background-color: #232323; z-index: 100; padding-left: 1em;">
+        <nav class="navbar fixed-top navbar-expand-lg" style="gap: 0 38%; background-color: #232323; z-index: 100; padding-left: 1em;">
             <a class="navbar-brand" id="bl-col" href="/home-bud">
                 <img src="/images/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
                 The Buddy Company
@@ -45,10 +45,13 @@
                     <a class="nav-link" id="bl-col" href="/home-bud">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="bl-col" href="/Bud-view-all-events">Events</a>
+                    <a class="nav-link" id="bl-col" href="/Bud-about-us">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="bl-col" href="/Bud-about-us">About Us</a>
+                    <a class="nav-link" id="bl-col" href="#"><%=BudName%></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="bl-col" href="/Bud-logout">Log-Out</a>
                 </li>
               </ul>
             </div>
@@ -68,7 +71,7 @@
             <div class="col-lg-10" style="margin: auto;">
                 <div class="card bg-dark mb-5">
                     <div class="card-body" style="padding: 4em">
-                        <h5 id="abt-title" class="card-title">KC College</h5>
+                        <h5 id="abt-title" class="card-title">KC (Kishinchand Chellaram) College</h5>
                         <p id="team-about" class="card-text text-start">Welcome to KC College, a distinguished institution committed to fostering academic excellence and personal growth. With a legacy spanning for decades, we have consistently provided a nurturing environment that empowers students to thrive in both their educational pursuits and their journey towards becoming well-rounded individuals. Our dedicated faculty, state-of-the-art facilities, and vibrant community come together to create a dynamic learning experience that prepares students for success in a rapidly evolving world. Join us at KC College and all embark on a transformative educational adventure that will shape your future.</p>
                     </div>
                 </div>
@@ -186,33 +189,31 @@
         </div>
     </section>
 
-
     <footer>
         <div class="row align-items-center" style="margin-left: 2%;">
             <div class="col-lg-1">
                 <img src="/images/favicon.ico" height="120" width="120" class="d-inline-block align-top" alt="">
             </div>
-            <div class="col-lg-7 col-md-10">
-                <p>Our mission is to ensure that every newcomer feels welcomed, empowered, and ready to conquer their academic journey. Our enthusiastic team of second-year buddies comes from diverse backgrounds and academic disciplines, ensuring that you'll find a mentor who understands your unique needs and aspirations.</p>
+            <div class="col-lg-6 col-md-10">
+                <p>Our mission is to ensure that every newcomer feels welcomed, empowered, and ready to conquer their academic journey. Our enthusiastic team of second-year buddies comes from diverse backgrounds and academic disciplines, ensuring that you'll find a <br> mentor who understands your unique needs and aspirations.</p>
             </div>
     
-            <div class="col-lg-2 col-md-5", style="text-align: center;">
+            <div class="col-lg-1 col-md-5"></div>
+            <div class="col-lg-2 col-md-5">
                 <ul class="unstyled-list">
-                    <li><strong>Shoreditch</strong></li>
-                    <li>Shoreditch</li>
-                    <li>Woke retro </li>
-                    <li>Readymade </li>
-                    <li>Scenester </li>
+                    <li><strong>Pages</strong></li>
+                    <li><a href="/home-bud">Home</a></li>
+                    <li><a href="/Bud-view-all-events">Events</a></li>
+                    <li><a href="/Bud-about-us">About Us</a></li>
                 </ul>
             </div>
     
-            <div class="col-lg-2 col-md-5", style="text-align: center;">
+            <div class="col-lg-2 col-md-5">
                 <ul class="unstyled-list">
-                    <li><strong>Shoreditch</strong></li>
-                    <li>Shoreditch</li>
-                    <li>Woke retro </li>
-                    <li>Readymade </li>
-                    <li>Scenester </li>
+                    <li><strong>Events</strong></li>
+                    <% files.forEach(function(myFile) { %>
+                        <li><a href=""><%= myFile.eventName %></a></li>
+                    <% }) %>               
                 </ul>
             </div>
         </div>
